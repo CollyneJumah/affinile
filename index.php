@@ -117,13 +117,15 @@
 										<div class="fprodquapriceblock center">
 											<div class="currency fprodpriitm ibvt">$</div>
 											<div class="fprodprice fprodpriitm ibvt">
-												<input id='modalert_total' type="text" value="0" class="fprodqptxt onlyval"/>
+												<form>
+												<input id='modalert_total' name="modelert" type="text" value="" class="fprodqptxt onlyval"/>
+												</form>
 											</div>
 										</div>
 										<div class="fprodperpill center">
 											<div class="currency fprodperpillitm ibvt"></div>
 											<div class="fprodperpillitm ibvt">
-												<input id='modalert_price' type="text" value="$0" class="fprodqperptxt onlyval"/>
+												<input id='modalert_price' type="text"  value="$0" class="fprodqperptxt onlyval"/>
 											</div>
 											<div class="fprodperpillitm ibvt">
 												&nbsp;&nbsp;per pill
@@ -135,7 +137,7 @@
 								
 								<div class="fprodopr fprodblockitm">
 									<div class="fprodbuy ibvm fprodopritm">
-										<a id='buy_now' href="payment.php">
+										<a id='buy_now' href="payment.php?type='modalert' && qty='2' ">
 											<div class="fprodcarticon fprodopricon ibvm">
 												<img src="images/carticon.png" alt="Cart"/>
 											</div>
@@ -655,7 +657,7 @@
 									<div class="openchitm ibvm" id="sample_pack_1">Order Trial Pack</div>
 									<div class="boxcheckout closechitm ibvm">
 										<div>
-											<span id='check_out_price'>Shipping is FREE </span>
+											<span id='check_out_price'> Shipping is FREE </span>
 										</div>
 										<div>
 											<span></span>
@@ -1219,5 +1221,60 @@
 			
 		});
 	</script>
-	<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+	<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */
+	</script>
+	<script>
+
+		$(document).ready(function() {
+		  $("input[name=modalert_prod]").on("change", function() {
+		    var modalert = "";
+
+		    $("input:checked").each(function(key, val) {
+		      modalert = $(val).val();
+		    });
+		    document.getElementById('modalert_total').value = modalert;
+
+		    // $(".results").html(results);
+		  });
+
+		  $("input[name=modvigil_prod]").on("change", function() {
+		    var modvigil = "";
+
+		    $("input:checked").each(function(key, val) {
+		      modvigil = $(val).val();
+		    });
+		    document.getElementById('modvigil_total').value = modvigil;
+
+		    // $(".results").html(results);
+		  });
+
+		  $("input[name=waklert_prod]").on("change", function() {
+		    var waklert = "";
+
+		    $("input:checked").each(function(key, val) {
+		      waklert = $(val).val();
+		    });
+		    document.getElementById('waklert_total').value = waklert;
+
+		    // $(".results").html(results);
+		  });
+
+		  $("input[name=artvigil_prod]").on("change", function() {
+		    var artvigil = "";
+
+		    $("input:checked").each(function(key, val) {
+		      artvigil = $(val).val();
+		    });
+		    document.getElementById('artvigil_total').value = artvigil;
+
+		    // $(".results").html(results);
+		  });
+
+
+
+		 });
+		
+	</script>
+
+	</body>
 	</html>
