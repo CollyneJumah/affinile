@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 	<title>Choo...Choo.. Buy Modafinil online | Express Delivery of Modalert, Waklert, Artvigil, Modvigil.</title>
@@ -9,7 +9,7 @@
 	<meta name="robots" content="index,follow"/>
 	<meta name="twitter:card" content="summary"/>
 	<meta name="twitter:creator" content="@AfinilExpress"/>
-	<meta name="twitter:site" content="@AfinilExpress"/>
+	<meta name="twitter:site" content="@AfinilExpress"/>  
 	
 	
 	<link rel="icon" type="image/png" href="images/favicon.ico"/>
